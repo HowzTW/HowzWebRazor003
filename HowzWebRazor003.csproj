@@ -9,4 +9,12 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Employee\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\Employee\Index.cshtml.cs">
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
