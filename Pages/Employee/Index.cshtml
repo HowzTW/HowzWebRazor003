@@ -23,7 +23,7 @@
     
     <div class="row">
         <div class="col-sm">
-            <div class="alert alert-primary" role="alert">
+            <div class="alert alert-info" role="alert">
                 共有 @Model.Employees.Count 筆員工資料
             </div>
         </div>
@@ -33,19 +33,20 @@
 	{
     <div class="row">
         <div class="col-sm">
-            <div class="alert alert-info" role="alert">
-               @employee["Name"].Properties.First().Value , @employee["PersonId"].Properties.First().Value
-            </div>
 
             <div class="card">
                 <h4 class="card-header">
-					@employee["Name"].Properties.First().Value
+					@employee["Name"]
 				</h4>
                 <div class="card-body">
-                    <h4 class="card-title">Id</h4>
+                    <h4 class="card-title">身分證號</h4>
                     <p class="card-text">
-						@employee["PersonId"].Properties.First().Value
+						@employee["PersonId"]
 					</p>
+					<h4 class="card-title">其他屬性</h4>
+                    <p class="card-text">
+                        XXX
+                    </p>
                     <a href="#" class="btn btn-primary">修改</a>
 					<a href="#" class="btn btn-primary">刪除</a>
                 </div>
