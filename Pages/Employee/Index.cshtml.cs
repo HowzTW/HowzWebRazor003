@@ -6,7 +6,7 @@ using Google.Cloud.Datastore.V1;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace HowzWebRazor001.Pages.Employee
+namespace HowzWebRazor003.Pages.Employee
 {
     public class IndexModel : PageModel
     {
