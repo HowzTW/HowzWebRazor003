@@ -34,17 +34,17 @@
     <div class="row">
         <div class="col-sm">
             <div class="alert alert-info" role="alert">
-               @employee["Name"] , @employee["PersonId"]
+               @employee["Name"].Properties.First().Value , @employee["PersonId"].Properties.First().Value
             </div>
 
             <div class="card">
                 <h4 class="card-header">
-					@employee["Name"]
+					@employee["Name"].Properties.First().Value
 				</h4>
                 <div class="card-body">
                     <h4 class="card-title">Id</h4>
                     <p class="card-text">
-						@employee["PersonId"][1]
+						@employee["PersonId"].Properties.First().Value
 					</p>
                     <a href="#" class="btn btn-primary">修改</a>
 					<a href="#" class="btn btn-primary">刪除</a>
