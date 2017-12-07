@@ -7,21 +7,26 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@Model.Message</h3>
 
-<input type="button" onclick="/Employee/Add" value="新增" />
-
-
 <div class="container-fluid">
   <!-- Content here -->
     <div class="row">
-        <input type="button" onclick="/Employee/Add" value="新增" />
         <button type="button" class="btn btn-primary" onclick="/Employee/Add">新增</button>
     </div>
 
     
     <div class="row">
         <div class="col-sm">
-            <div class="alert alert-primary" role="alert">
+            <div class="alert alert-info" role="alert">
                 共有 @Model.Employees.Count 筆員工資料
+            </div>
+        </div>
+    </div>
+
+	<% foreach( var employee in Model.Employees)
+    <div class="row">
+        <div class="col-sm">
+            <div class="alert alert-danger" role="alert">
+                @employee["Name"] , @employee["PersonId"]
             </div>
         </div>
     </div>
