@@ -5,7 +5,7 @@
 }
 
 <h2>@ViewData["Title"]</h2>
-<h3>Model.Message</h3>
+<h3>@Model.Message</h3>
 
 <div class="container-fluid">
   <!-- Content here -->
@@ -17,7 +17,7 @@
 	<div class="row">
 		<div class="col-sm">
 			<div class="alert alert-info" role="alert">
-                共有 Model.Employees.Count 筆員工資料
+                共有 @Model.Employees.Count 筆員工資料
             </div>
         </div>
 	</div>
@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-sm">
             <div class="alert alert-info" role="alert">
-                @employee["Name"] ,  @employee["PersonId"]
+                HELLO
             </div>
         </div>
     </div>
