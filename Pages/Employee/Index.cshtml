@@ -9,14 +9,20 @@
 
 <div class="container-fluid">
   <!-- Content here -->
+
     <div class="row">
-        <button type="button" class="btn btn-primary" onclick="/Employee/Add">新增</button>
+        <div class="col-sm">
+            <div class="alert alert-primary" role="alert">
+                <button type="button" class="btn btn-primary" onclick="/Employee/Add">新增</button>
+            </div>
+        </div>
     </div>
 
+	
     
     <div class="row">
         <div class="col-sm">
-            <div class="alert alert-info" role="alert">
+            <div class="alert alert-primary" role="alert">
                 共有 @Model.Employees.Count 筆員工資料
             </div>
         </div>
@@ -32,5 +38,151 @@
         </div>
     </div>
     }
-    
+
+    <div class="row">
+        <div class="page-header text-center col-sm-12 col-lg-12 animated fade">
+            <h1>Pricing</h1>
+            <p class="lead">
+                 Boxes for any type of pricing plan
+            </p>
+        </div>
+    </div>
+    <div class="row pricing animated fadeInUpNow">
+        <div class="col-lg-3">
+            <div class="whitebox salmonborder">
+                <div class="content">
+                    <p class="price">
+                         299<sup>$</sup>
+                    </p>
+                    <ul>
+                        <li>Shopping Area</li>
+                        <li>Spacious Rooms </li>
+                        <li>Close to the Airport</li>
+                        <li>Heart of the City</li>
+                    </ul>
+                    <a class="btn btn-lg"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="whitebox goldborder">
+                <div class="content best-offer">
+                    <p class="price">
+                         479<sup>$</sup>
+                    </p>
+                    <ul>
+                        <li>Shopping Area</li>
+                        <li>Spacious Rooms </li>
+                        <li>Close to the Airport</li>
+                        <li>Heart of the City</li>
+                    </ul>
+                    <a class="btn btn-lg"><i class="fa fa-user"></i> Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="whitebox blueborder">
+                <div class="content">
+                    <p class="price">
+                         621<sup>$</sup>
+                    </p>
+                    <ul>
+                        <li>Shopping Area</li>
+                        <li>Spacious Rooms </li>
+                        <li>Close to the Airport</li>
+                        <li>Heart of the City</li>
+                    </ul>
+                    <a class="btn btn-lg"><i class="fa fa-book"></i> Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="whitebox greenborder">
+                <div class="content">
+                    <p class="price">
+                         843<sup>$</sup>
+                    </p>
+                    <ul>
+                        <li>Shopping Area</li>
+                        <li>Spacious Rooms </li>
+                        <li>Close to the Airport</li>
+                        <li>Heart of the City</li>
+                    </ul>
+                    <a class="btn btn-lg"><i class="fa fa-mail-forward"></i> Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="page-header text-center col-sm-12 col-lg-12 animated fade">
+            <h1>Our Team</h1>
+            <p class="lead">
+                 People behind this product
+            </p>
+        </div>
+    </div>
+    <div class="row animated fadeInUpNow">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="http://www.wowthemes.net/demo/calypso/img/demo/team1.jpg" alt="">
+                <div class="caption">
+                    <h4>Ralph P. Peters</h4>
+                    <span class="primarycol">- Manager at Company -</span>
+                    <p>
+                         Praesent id metus ante, ut condimentum magna. Nam bibendum, felis eget.<br>
+                    </p>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="http://www.wowthemes.net/demo/calypso/img/demo/team2.jpg" alt="">
+                <div class="caption">
+                    <h4>Emma M. Coffey</h4>
+                    <span class="primarycol">- Lawyer at Construct Inc -</span>
+                    <p>
+                         Praesent id metus ante, ut condimentum magna. Nam bibendum, felis eget.<br>
+                    </p>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="http://www.wowthemes.net/demo/calypso/img/demo/team3.jpg" alt="">
+                <div class="caption">
+                    <h4>Eugene B. Bedwell</h4>
+                    <span class="primarycol">- Owner of Biscaya -</span>
+                    <p>
+                         Praesent id metus ante, ut condimentum magna. Nam bibendum, felis eget.<br>
+                    </p>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	
 </div>
