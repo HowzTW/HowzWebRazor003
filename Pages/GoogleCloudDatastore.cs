@@ -1,7 +1,7 @@
 ﻿using System;
 using Google.Cloud.Datastore.V1;
 
-namespace HowzWebRazor001.Pages
+namespace HowzWebRazor003.Pages
 {
     public static class GoogleCloudDatastore
     {
