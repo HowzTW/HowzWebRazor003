@@ -11,7 +11,7 @@ namespace HowzWebRazor003.Pages.Employee
     public class IndexModel : PageModel
     {
         public string Message { get; set; }
-        public List<Entity> Employees { get; set; }
+        public List<Employee> Employees { get; set; }
 
         public void OnGet()
         {
@@ -21,7 +21,12 @@ namespace HowzWebRazor003.Pages.Employee
             Query query = new Query("Employee");
             var allEmployee = db.RunQueryLazily(query);
             int count = allEmployee.Count();
-            Employees = allEmployee.ToList();
+            Employees = new List<Employee>();
+            foreach (Entity entity in allEmployee.ToList())
+            {
+                Employees.Add(new Employee(entity));
+            }
+
 
             Message = "員工資料新增/修改/刪除作業";
         }
