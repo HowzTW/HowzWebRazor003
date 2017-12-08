@@ -5,8 +5,9 @@
 }
 
 <h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
-
+<h5>@Model.Message</h5>
+<hr />
+	
 <div class="container-fluid">
   <!-- Content here -->
 
@@ -14,7 +15,7 @@
     
     <div class="row">
         <div class="col-sm">
-			<button type="button" class="btn btn-primary" onclick="/Employee/Add">新增</button>
+			<button class="btn btn-default custom-btn-default"><a asp-page="./Employee/Add">新增</a></button>
             <div class="alert alert-warning" role="alert">
                 共有 @Model.Employees.Count 筆員工資料
             </div>
