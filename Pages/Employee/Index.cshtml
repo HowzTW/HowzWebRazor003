@@ -15,10 +15,8 @@
     
     <div class="row">
         <div class="col-sm">
-			<button class="btn btn-default custom-btn-default"><a asp-page="/Employee/Add">新增</a></button>
-			<a asp-page="/Employee/Add" class="btn btn-primary">新增</a>
             <div class="alert alert-warning" role="alert">
-                共有 @Model.Employees.Count 筆員工資料
+                共有 @Model.Employees.Count 筆員工資料 <a asp-page="/Employee/Add" class="btn btn-primary">新增</a>
             </div>
         </div>
     </div>
@@ -40,7 +38,8 @@
     					</p>
     					<h4 class="card-title">其他屬性</h4>
                         <p class="card-text">
-                            @employee.Password , @employee.Id
+                            密碼：@employee.Password <br /> 
+							Id：@employee.Id
                         </p>
                         <a href="#" class="btn btn-primary">修改</a>
     					<a href="#" class="btn btn-primary">刪除</a>
