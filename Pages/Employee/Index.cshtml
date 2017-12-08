@@ -15,7 +15,8 @@
     
     <div class="row">
         <div class="col-sm">
-			<button class="btn btn-default custom-btn-default"><a asp-page="./Employee/Add">新增</a></button>
+			<button class="btn btn-default custom-btn-default"><a asp-page="/Employee/Add">新增</a></button>
+			<a asp-page="/Employee/Add" class="btn btn-primary">新增</a>
             <div class="alert alert-warning" role="alert">
                 共有 @Model.Employees.Count 筆員工資料
             </div>
