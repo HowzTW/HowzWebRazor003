@@ -10,47 +10,41 @@
 <div class="container-fluid">
   <!-- Content here -->
 
+
+    
     <div class="row">
         <div class="col-sm">
-            <div class="alert alert-primary" role="alert">
+			<button type="button" class="btn btn-primary" onclick="/Employee/Add">新增</button>
+            <div class="alert alert-warning" role="alert">
                 共有 @Model.Employees.Count 筆員工資料
-				<button type="button" class="btn btn-primary" onclick="/Employee/Add">新增</button>
             </div>
         </div>
     </div>
 
 	
-    
-    <div class="row">
-        <div class="col-sm">
-            <div class="alert alert-info" role="alert">
-                共有 @Model.Employees.Count 筆員工資料
-            </div>
-        </div>
-    </div>
-
 	@foreach (var employee in Model.Employees)
 	{
     <div class="row">
         <div class="col-sm">
-
-            <div class="card">
-                <h4 class="card-header">
-					@employee["Name"]
-				</h4>
-                <div class="card-body">
-                    <h4 class="card-title">身分證號</h4>
-                    <p class="card-text">
-						@employee["PersonId"]
-					</p>
-					<h4 class="card-title">其他屬性</h4>
-                    <p class="card-text">
-                        XXX
-                    </p>
-                    <a href="#" class="btn btn-primary">修改</a>
-					<a href="#" class="btn btn-primary">刪除</a>
+            <div class="alert alert-info" role="alert">
+                <div class="card">
+                    <h4 class="card-header">
+    					@(string)employee["Name"]
+    				</h4>
+                    <div class="card-body">
+                        <h4 class="card-title">身分證號</h4>
+                        <p class="card-text">
+    						@(string)employee["PersonId"]
+    					</p>
+    					<h4 class="card-title">其他屬性</h4>
+                        <p class="card-text">
+                            XXX
+                        </p>
+                        <a href="#" class="btn btn-primary">修改</a>
+    					<a href="#" class="btn btn-primary">刪除</a>
+                    </div>
                 </div>
-            </div>
+		    </div>
         </div>
     </div>
     }
