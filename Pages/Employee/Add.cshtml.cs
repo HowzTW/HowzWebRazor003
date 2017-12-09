@@ -23,7 +23,7 @@ namespace HowzWebRazor003.Pages.Employee
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid) return Page();
-
+            /*
             DatastoreDb db = GoogleCloudDatastore.CreateDb();
 
             var newEmployee = new Entity
@@ -34,10 +34,11 @@ namespace HowzWebRazor003.Pages.Employee
                 ["PersonId"] = this.employee.PersonId
             };
             var employeeKeys = db.Insert(new[] { newEmployee });
+            */
 
+            Console.WriteLine("Name: {0}, PersonId: {1}, Password: {2}", this.employee.Name, this.employee.PersonId, this.employee.Password);
 
-
-            return RedirectToPage("/About");
+            return RedirectToPage("/Employee/Index");
         }
     }
 }
