@@ -31,11 +31,16 @@ namespace HowzWebRazor003.Pages.Employee
             var newEmployee = new Entity
             {
                 Key = db.CreateKeyFactory("Employee").CreateIncompleteKey(),
-                ["Name"] = employee.Name,
-                ["Password"] = employee.Password,
-                ["PersonId"] = employee.PersonId
+                ["Name"] = "郭靖",
+                ["Password"] = "abcdefghij",
+                ["PersonId"] = "M123456789"
+
             };
             var employeeKeys = db.Insert(new[] { newEmployee });
+
+                //["Name"] = employee.Name,
+                //["Password"] = employee.Password,
+                //["PersonId"] = employee.PersonId
 
 
             return RedirectToPage("/Employee/Index");
