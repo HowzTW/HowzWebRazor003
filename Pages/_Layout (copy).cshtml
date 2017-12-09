@@ -1,82 +1,145 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PHBB</title>
+<!--[if IE 7 ]><html class="ie ie7 lte9 lte8 lte7" lang="en-US"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en-US">  <![endif]-->
+<!--[if IE 9]><html class="ie ie9 lte9" lang="en-US"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="noIE" lang="en-US">
+<!--<![endif]-->
+    <head>
+        <!-- meta -->
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>@ViewData["Title"] - PHBB</title>
 
-    <environment include="Development">
+        <link rel="stylesheet" href="~/css/themes/SIGHT-master/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/css/themes/SIGHT-master/assets/css/ionicons.min.css">
+        <link rel="stylesheet" href="~/css/themes/SIGHT-master/assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="~/css/themes/SIGHT-master/assets/css/owl.theme.css">
+        <link rel="stylesheet" href="~/css/themes/SIGHT-master/assets/css/main.css">
+        <link rel="stylesheet" href="~/css/themes/SIGHT-master/assets/css/section.css">
+        <link rel="stylesheet" href="~/css/themes/SIGHT-master/assets/css/service.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+                <script src="assets/js/html5shiv.js"></script>
+                <script src="assets/js/respond.js"></script>
+            <![endif]-->
 
-        <link rel="stylesheet" href="~/css/SIGHT-master/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="~/css/SIGHT-master/assets/css/sight.css">
-			
-        <!--
-		<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+            <!--[if IE 8]>
+                <script src="assets/js/selectivizr.js"></script>
+            <![endif]-->
+    </head>
 
-        <link rel="stylesheet" href="~/css/themes/theme-quasar/assets/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="~/css/themes/theme-quasar/assets/css/style.css" />
-        <link rel="stylesheet" href="~/css/themes/theme-quasar/assets/css/skin-tealblue.css" />
-        -->     
-
-    </environment>
-    <environment exclude="Development">
-
-        <link rel="stylesheet" href="~/css/SIGHT-master/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="~/css/SIGHT-master/assets/css/sight.css">
-
-        <!--
-
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-
-        <link rel="stylesheet" href="~/css/themes/theme-quasar/assets/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="~/css/themes/theme-quasar/assets/css/style.css" />
-        <link rel="stylesheet" href="~/css/themes/theme-quasar/assets/css/skin-tealblue.css" />
-        --> 
-			
-	</environment>
-</head>
 <body>
-		
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+<!-- Home -->
+    <section class="portfolio-header" id="header">
+        
+        <nav class="navbar navbar-default _navbar-fixed-top">
+            <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">PHBB</a>
+                </div> <!-- /.navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a asp-page="/Index">首頁</a></li>
+                        <li><a asp-page="/About">關於</a></li>
+                        <li><a asp-page="/Contact">聯絡</a></li>
+                        <li><a asp-page="/Employee/Index">員工資料維護</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul> <!-- /.nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+    </section> <!-- /#header -->
+
+
+
+        <section class="portfolio" id="portfolio">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-page="/Index" class="navbar-brand">PHBB</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
-                    <li><a asp-page="/Employee/Index">員工資料維護</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2017 - PHBB</p>
-        </footer>
-    </div>
+            @RenderBody()
+		</div>
+        </section>
+
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="copy">
+                        Copyright &copy; 2018 PHBB
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <div class="social-icon">
+                        <a href="#">
+                            <div class="icon fb">
+                                <i class="ion-social-facebook"></i>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="icon twitter">
+                                <i class="ion-social-twitter"></i>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="icon google">
+                                <i class="ion-social-googleplus"></i>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="icon rss">
+                                <i class="ion-social-rss"></i>
+                            </div>
+                        </a>
+                    </div>      
+                </div>
+                <div class="col-sm-4 text-right">
+                    <div class="copy">
+                        Theme by <a href="http://www.themewagon.com">themewagon.com</a>. All Rights Reserved
+                    </div>
+                </div>
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </footer>
+    
 
     <environment include="Development">
+
+         <script src="~/css/themes/SIGHT-master/assets/js/jquery-1.11.2.min.js"></script>
+        <script src="~/css/themes/SIGHT-master/assets/js/bootstrap.min.js"></script>
+        <script src="~/css/themes/SIGHT-master/assets/js/owl.carousel.min.js"></script>
+        <script src="~/css/themes/SIGHT-master/assets/js/contact.js"></script>
+        <!-- // <script src="assets/js/smoothscroll.js"></script> -->
+        <script src="~/css/themes/SIGHT-master/assets/js/script.js"></script>
+			
+		<!--	
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        -->
+
+		<script src="~/js/site.js" asp-append-version="true"></script>
+		
     </environment>
     <environment exclude="Development">
+
+        <script src="~/css/themes/SIGHT-master/assets/js/jquery-1.11.2.min.js"></script>
+        <script src="~/css/themes/SIGHT-master/assets/js/bootstrap.min.js"></script>
+        <script src="~/css/themes/SIGHT-master/assets/js/owl.carousel.min.js"></script>
+        <script src="~/css/themes/SIGHT-master/assets/js/contact.js"></script>
+        <!-- // <script src="assets/js/smoothscroll.js"></script> -->
+        <script src="~/css/themes/SIGHT-master/assets/js/script.js"></script>
+        
+        <!--    			
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery"
@@ -89,6 +152,8 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
+        -->
+			
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
