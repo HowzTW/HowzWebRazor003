@@ -25,18 +25,27 @@ namespace HowzWebRazor003.Pages.Employee
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid) return Page();
-
+            Console.WriteLine("Step01: Model State is Valid.");
             DatastoreDb db = GoogleCloudDatastore.CreateDb();
+            Console.WriteLine("Step02: Create Datastore DB");
 
             var newEmployee = new Entity
             {
                 Key = db.CreateKeyFactory("Employee").CreateIncompleteKey(),
-                ["Name"] = "郭靖",
-                ["Password"] = "abcdefghij",
-                ["PersonId"] = "M123456789"
+                //["Name"] = "郭靖",
+                //["Password"] = "abcdefghij",
+                //["PersonId"] = "M123456789"
+                ["Name"] = employee.Name,
+                ["Password"] = employee.Password,
+                ["PersonId"] = employee.PersonId
+
 
             };
+            Console.WriteLine("Step03: Construct Entity - Name: {0}", employee.Name);
+
+
             var employeeKeys = db.Insert(new[] { newEmployee });
+            Console.WriteLine("Step04: Insert to DB");
 
                 //["Name"] = employee.Name,
                 //["Password"] = employee.Password,
