@@ -12,6 +12,8 @@ namespace HowzWebRazor003.Pages.Employee
     public class AddModel : PageModel
     {
         public string Message { get; set; }
+
+        [BindProperty]
         public Employee employee { get; set; }
 
         public void OnGet()
@@ -23,20 +25,18 @@ namespace HowzWebRazor003.Pages.Employee
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid) return Page();
-            /*
+
             DatastoreDb db = GoogleCloudDatastore.CreateDb();
 
             var newEmployee = new Entity
             {
                 Key = db.CreateKeyFactory("Employee").CreateIncompleteKey(),
-                ["Name"] = this.employee.Name,
-                ["Password"] = this.employee.Password,
-                ["PersonId"] = this.employee.PersonId
+                ["Name"] = employee.Name,
+                ["Password"] = employee.Password,
+                ["PersonId"] = employee.PersonId
             };
             var employeeKeys = db.Insert(new[] { newEmployee });
-            */
 
-            Console.WriteLine("Name: {0}, PersonId: {1}, Password: {2}", this.employee.Name, this.employee.PersonId, this.employee.Password);
 
             return RedirectToPage("/Employee/Index");
         }
